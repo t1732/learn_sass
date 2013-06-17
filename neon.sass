@@ -1,0 +1,31 @@
+// ネオン管っぽいエフェクト
+//
+//  HAML 記述例
+//
+//  .neon
+//    Hello world
+//
+
+@import compass/css3/text-shadow
+
+.neon
+  -webkit-animation-name: glow
+  -webkit-animation-duration: 1s
+  -webkit-animation-timing-function: ease-in
+  -webkit-animation-iteration-count: infinite
+  -webkit-animation-direction: alternate
+  -webkit-animation-fill-mode: both
+
+@-webkit-keyframes glow
+  from
+    +text-shadow(0 0 .1em #fdf, 0 0 .5em #fdf, 0 0 1em #fdf)
+  10%
+    +text-shadow(0 0 .1em #fdf, 0 0 .4em #fdf, 0 0 1em #fdf)
+  30%
+    +text-shadow(0 0 .1em #fdf, 0 0 .3em #fdf, 0 0 1em #fdf)
+  60%
+    +text-shadow(0 0 .1em #fdf, 0 0 .2em #fdf, 0 0 1em #fdf)
+  90%
+    +text-shadow(0 0 .1em #fdf, 0 0 .1em #fdf, 0 0 1em #fdf)
+  to
+    +text-shadow(0 0 .1em #fdf, 0 0 0 #fdf, 0 0 1em #fdf)
